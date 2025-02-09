@@ -1,0 +1,15 @@
+newspaper3k
+beautifulsoup4
+requests
+arxiv
+lxml
+feedparser
+prophet
+matplotlib
+umap-learn
+wordcloud
+sentence-transformers
+torch
+pandas
+scikit-learn
+pytz
