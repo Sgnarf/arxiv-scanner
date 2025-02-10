@@ -13,3 +13,8 @@ torch
 pandas
 scikit-learn
 pytz
+streamlit
+matplotlib 
+plotly 
+sqlite3 
+sklearn
