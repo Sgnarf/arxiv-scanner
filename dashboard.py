@@ -23,10 +23,12 @@ df = load_data()
 
 st.title("ArXiv Paper Clustering Dashboard")
 
-# Time Series
-st.subheader("Papers per Cluster Over Time")
-time_series = df.groupby(["date", "cluster"]).size().unstack().fillna(0)
-st.line_chart(time_series)
+# Time Series (Cumulative)
+st.subheader("Cumulative Papers per Cluster Over Time")
+time_series_cumulative = df.groupby(["date", "cluster"]).size().unstack().fillna(0)
+time_series_cumulative = time_series_cumulative.cumsum(axis=0)
+st.line_chart(time_series_cumulative)
+
 
 # Cluster Pie Chart
 st.subheader("Cluster Distribution")
