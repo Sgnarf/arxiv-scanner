@@ -18,7 +18,7 @@ def load_data():
     df["date"] = df["published"].dt.date
     df["embedding"] = df["embedding"].apply(lambda x: np.frombuffer(x, dtype=np.float32))
     # Exclude clusters -1 and 0
-    df = df[~df["cluster"].isin([-1])]
+    df = df[~df["cluster"].isin([-1,0])]
     return df
 
 
